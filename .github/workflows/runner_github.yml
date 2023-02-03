@@ -7,7 +7,7 @@ env:
 
 jobs:
   testing_runner:
-    runs-on: runner-linux
+    runs-on: linux-runner
     env:
       Greeting: Hello
     steps:
