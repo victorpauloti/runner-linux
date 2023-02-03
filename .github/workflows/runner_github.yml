@@ -1,17 +1,15 @@
-name: Greeting on variable day
+name: List Files
 
 on:
   [push]
-env:
-  DAY_OF_WEEK: Today
 
 jobs:
   testing_runner:
     runs-on: linux-runner
     env:
-      Greeting: Hello
+      command: ls
     steps:
-      - name: "Say Hello New Job it's Today"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+      - name: "run commands with variables"
+        run: $command $path
         env:
-          First_Name: New Job
+          path: /home/ubuntu/
